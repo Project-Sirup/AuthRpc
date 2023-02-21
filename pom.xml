@@ -6,7 +6,7 @@
 
     <groupId>sirup.service.auth.rpc.proto</groupId>
     <artifactId>auth-rpc</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
     
     <distributionManagement>

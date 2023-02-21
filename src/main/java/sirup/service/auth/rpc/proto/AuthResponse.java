@@ -43,7 +43,20 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 8: {
+          case 10: {
+            sirup.service.auth.rpc.proto.ErrorRpc.Builder subBuilder = null;
+            if (error_ != null) {
+              subBuilder = error_.toBuilder();
+            }
+            error_ = input.readMessage(sirup.service.auth.rpc.proto.ErrorRpc.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(error_);
+              error_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 16: {
 
             tokenValid_ = input.readBool();
             break;
@@ -80,10 +93,31 @@ private static final long serialVersionUID = 0L;
             sirup.service.auth.rpc.proto.AuthResponse.class, sirup.service.auth.rpc.proto.AuthResponse.Builder.class);
   }
 
-  public static final int TOKENVALID_FIELD_NUMBER = 1;
+  public static final int ERROR_FIELD_NUMBER = 1;
+  private sirup.service.auth.rpc.proto.ErrorRpc error_;
+  /**
+   * <code>.auth.proto.ErrorRpc error = 1;</code>
+   */
+  public boolean hasError() {
+    return error_ != null;
+  }
+  /**
+   * <code>.auth.proto.ErrorRpc error = 1;</code>
+   */
+  public sirup.service.auth.rpc.proto.ErrorRpc getError() {
+    return error_ == null ? sirup.service.auth.rpc.proto.ErrorRpc.getDefaultInstance() : error_;
+  }
+  /**
+   * <code>.auth.proto.ErrorRpc error = 1;</code>
+   */
+  public sirup.service.auth.rpc.proto.ErrorRpcOrBuilder getErrorOrBuilder() {
+    return getError();
+  }
+
+  public static final int TOKENVALID_FIELD_NUMBER = 2;
   private boolean tokenValid_;
   /**
-   * <code>bool tokenValid = 1;</code>
+   * <code>bool tokenValid = 2;</code>
    */
   public boolean getTokenValid() {
     return tokenValid_;
@@ -103,8 +137,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (error_ != null) {
+      output.writeMessage(1, getError());
+    }
     if (tokenValid_ != false) {
-      output.writeBool(1, tokenValid_);
+      output.writeBool(2, tokenValid_);
     }
     unknownFields.writeTo(output);
   }
@@ -115,9 +152,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (error_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getError());
+    }
     if (tokenValid_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(1, tokenValid_);
+        .computeBoolSize(2, tokenValid_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -135,6 +176,11 @@ private static final long serialVersionUID = 0L;
     sirup.service.auth.rpc.proto.AuthResponse other = (sirup.service.auth.rpc.proto.AuthResponse) obj;
 
     boolean result = true;
+    result = result && (hasError() == other.hasError());
+    if (hasError()) {
+      result = result && getError()
+          .equals(other.getError());
+    }
     result = result && (getTokenValid()
         == other.getTokenValid());
     result = result && unknownFields.equals(other.unknownFields);
@@ -148,6 +194,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasError()) {
+      hash = (37 * hash) + ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + getError().hashCode();
+    }
     hash = (37 * hash) + TOKENVALID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getTokenValid());
@@ -284,6 +334,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      if (errorBuilder_ == null) {
+        error_ = null;
+      } else {
+        error_ = null;
+        errorBuilder_ = null;
+      }
       tokenValid_ = false;
 
       return this;
@@ -312,6 +368,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public sirup.service.auth.rpc.proto.AuthResponse buildPartial() {
       sirup.service.auth.rpc.proto.AuthResponse result = new sirup.service.auth.rpc.proto.AuthResponse(this);
+      if (errorBuilder_ == null) {
+        result.error_ = error_;
+      } else {
+        result.error_ = errorBuilder_.build();
+      }
       result.tokenValid_ = tokenValid_;
       onBuilt();
       return result;
@@ -361,6 +422,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(sirup.service.auth.rpc.proto.AuthResponse other) {
       if (other == sirup.service.auth.rpc.proto.AuthResponse.getDefaultInstance()) return this;
+      if (other.hasError()) {
+        mergeError(other.getError());
+      }
       if (other.getTokenValid() != false) {
         setTokenValid(other.getTokenValid());
       }
@@ -393,15 +457,132 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private sirup.service.auth.rpc.proto.ErrorRpc error_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        sirup.service.auth.rpc.proto.ErrorRpc, sirup.service.auth.rpc.proto.ErrorRpc.Builder, sirup.service.auth.rpc.proto.ErrorRpcOrBuilder> errorBuilder_;
+    /**
+     * <code>.auth.proto.ErrorRpc error = 1;</code>
+     */
+    public boolean hasError() {
+      return errorBuilder_ != null || error_ != null;
+    }
+    /**
+     * <code>.auth.proto.ErrorRpc error = 1;</code>
+     */
+    public sirup.service.auth.rpc.proto.ErrorRpc getError() {
+      if (errorBuilder_ == null) {
+        return error_ == null ? sirup.service.auth.rpc.proto.ErrorRpc.getDefaultInstance() : error_;
+      } else {
+        return errorBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.auth.proto.ErrorRpc error = 1;</code>
+     */
+    public Builder setError(sirup.service.auth.rpc.proto.ErrorRpc value) {
+      if (errorBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        error_ = value;
+        onChanged();
+      } else {
+        errorBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.auth.proto.ErrorRpc error = 1;</code>
+     */
+    public Builder setError(
+        sirup.service.auth.rpc.proto.ErrorRpc.Builder builderForValue) {
+      if (errorBuilder_ == null) {
+        error_ = builderForValue.build();
+        onChanged();
+      } else {
+        errorBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>.auth.proto.ErrorRpc error = 1;</code>
+     */
+    public Builder mergeError(sirup.service.auth.rpc.proto.ErrorRpc value) {
+      if (errorBuilder_ == null) {
+        if (error_ != null) {
+          error_ =
+            sirup.service.auth.rpc.proto.ErrorRpc.newBuilder(error_).mergeFrom(value).buildPartial();
+        } else {
+          error_ = value;
+        }
+        onChanged();
+      } else {
+        errorBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.auth.proto.ErrorRpc error = 1;</code>
+     */
+    public Builder clearError() {
+      if (errorBuilder_ == null) {
+        error_ = null;
+        onChanged();
+      } else {
+        error_ = null;
+        errorBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>.auth.proto.ErrorRpc error = 1;</code>
+     */
+    public sirup.service.auth.rpc.proto.ErrorRpc.Builder getErrorBuilder() {
+      
+      onChanged();
+      return getErrorFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.auth.proto.ErrorRpc error = 1;</code>
+     */
+    public sirup.service.auth.rpc.proto.ErrorRpcOrBuilder getErrorOrBuilder() {
+      if (errorBuilder_ != null) {
+        return errorBuilder_.getMessageOrBuilder();
+      } else {
+        return error_ == null ?
+            sirup.service.auth.rpc.proto.ErrorRpc.getDefaultInstance() : error_;
+      }
+    }
+    /**
+     * <code>.auth.proto.ErrorRpc error = 1;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        sirup.service.auth.rpc.proto.ErrorRpc, sirup.service.auth.rpc.proto.ErrorRpc.Builder, sirup.service.auth.rpc.proto.ErrorRpcOrBuilder> 
+        getErrorFieldBuilder() {
+      if (errorBuilder_ == null) {
+        errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            sirup.service.auth.rpc.proto.ErrorRpc, sirup.service.auth.rpc.proto.ErrorRpc.Builder, sirup.service.auth.rpc.proto.ErrorRpcOrBuilder>(
+                getError(),
+                getParentForChildren(),
+                isClean());
+        error_ = null;
+      }
+      return errorBuilder_;
+    }
+
     private boolean tokenValid_ ;
     /**
-     * <code>bool tokenValid = 1;</code>
+     * <code>bool tokenValid = 2;</code>
      */
     public boolean getTokenValid() {
       return tokenValid_;
     }
     /**
-     * <code>bool tokenValid = 1;</code>
+     * <code>bool tokenValid = 2;</code>
      */
     public Builder setTokenValid(boolean value) {
       
@@ -410,7 +591,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool tokenValid = 1;</code>
+     * <code>bool tokenValid = 2;</code>
      */
     public Builder clearTokenValid() {
       

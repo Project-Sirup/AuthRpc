@@ -8,7 +8,20 @@ public interface AuthResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>bool tokenValid = 1;</code>
+   * <code>.auth.proto.ErrorRpc error = 1;</code>
+   */
+  boolean hasError();
+  /**
+   * <code>.auth.proto.ErrorRpc error = 1;</code>
+   */
+  sirup.service.auth.rpc.proto.ErrorRpc getError();
+  /**
+   * <code>.auth.proto.ErrorRpc error = 1;</code>
+   */
+  sirup.service.auth.rpc.proto.ErrorRpcOrBuilder getErrorOrBuilder();
+
+  /**
+   * <code>bool tokenValid = 2;</code>
    */
   boolean getTokenValid();
 }

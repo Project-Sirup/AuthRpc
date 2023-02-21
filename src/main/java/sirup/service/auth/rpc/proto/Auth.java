@@ -57,16 +57,17 @@ public final class Auth {
       "equest\022/\n\013credentials\030\001 \001(\0132\032.auth.proto" +
       ".CredentialsRpc\"C\n\rTokenResponse\022#\n\005erro" +
       "r\030\001 \001(\0132\024.auth.proto.ErrorRpc\022\r\n\005token\030\002" +
-      " \001(\t\"\034\n\013AuthRequest\022\r\n\005token\030\001 \001(\t\"\"\n\014Au" +
-      "thResponse\022\022\n\ntokenValid\030\001 \001(\010\"4\n\016Creden" +
-      "tialsRpc\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002" +
-      " \001(\t\"0\n\010ErrorRpc\022\016\n\006status\030\001 \001(\005\022\024\n\014erro" +
-      "rMessage\030\002 \001(\t2\210\001\n\tSirupAuth\022>\n\005token\022\030." +
-      "auth.proto.TokenRequest\032\031.auth.proto.Tok" +
-      "enResponse\"\000\022;\n\004auth\022\027.auth.proto.AuthRe" +
-      "quest\032\030.auth.proto.AuthResponse\"\000B,\n\034sir" +
-      "up.service.auth.rpc.protoB\004AuthP\001\242\002\003SASb" +
-      "\006proto3"
+      " \001(\t\"\034\n\013AuthRequest\022\r\n\005token\030\001 \001(\t\"G\n\014Au" +
+      "thResponse\022#\n\005error\030\001 \001(\0132\024.auth.proto.E" +
+      "rrorRpc\022\022\n\ntokenValid\030\002 \001(\010\"4\n\016Credentia" +
+      "lsRpc\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(" +
+      "\t\"0\n\010ErrorRpc\022\016\n\006status\030\001 \001(\005\022\024\n\014errorMe" +
+      "ssage\030\002 \001(\t2\210\001\n\tSirupAuth\022>\n\005token\022\030.aut" +
+      "h.proto.TokenRequest\032\031.auth.proto.TokenR" +
+      "esponse\"\000\022;\n\004auth\022\027.auth.proto.AuthReque" +
+      "st\032\030.auth.proto.AuthResponse\"\000B,\n\034sirup." +
+      "service.auth.rpc.protoB\004AuthP\001\242\002\003SASb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -103,7 +104,7 @@ public final class Auth {
     internal_static_auth_proto_AuthResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_auth_proto_AuthResponse_descriptor,
-        new java.lang.String[] { "TokenValid", });
+        new java.lang.String[] { "Error", "TokenValid", });
     internal_static_auth_proto_CredentialsRpc_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_auth_proto_CredentialsRpc_fieldAccessorTable = new
