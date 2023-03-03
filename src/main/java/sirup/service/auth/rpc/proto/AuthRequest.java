@@ -49,6 +49,19 @@ private static final long serialVersionUID = 0L;
             token_ = s;
             break;
           }
+          case 18: {
+            sirup.service.auth.rpc.proto.CredentialsRpc.Builder subBuilder = null;
+            if (credentialsRpc_ != null) {
+              subBuilder = credentialsRpc_.toBuilder();
+            }
+            credentialsRpc_ = input.readMessage(sirup.service.auth.rpc.proto.CredentialsRpc.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(credentialsRpc_);
+              credentialsRpc_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -115,6 +128,27 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CREDENTIALSRPC_FIELD_NUMBER = 2;
+  private sirup.service.auth.rpc.proto.CredentialsRpc credentialsRpc_;
+  /**
+   * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+   */
+  public boolean hasCredentialsRpc() {
+    return credentialsRpc_ != null;
+  }
+  /**
+   * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+   */
+  public sirup.service.auth.rpc.proto.CredentialsRpc getCredentialsRpc() {
+    return credentialsRpc_ == null ? sirup.service.auth.rpc.proto.CredentialsRpc.getDefaultInstance() : credentialsRpc_;
+  }
+  /**
+   * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+   */
+  public sirup.service.auth.rpc.proto.CredentialsRpcOrBuilder getCredentialsRpcOrBuilder() {
+    return getCredentialsRpc();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -132,6 +166,9 @@ private static final long serialVersionUID = 0L;
     if (!getTokenBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, token_);
     }
+    if (credentialsRpc_ != null) {
+      output.writeMessage(2, getCredentialsRpc());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -143,6 +180,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!getTokenBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, token_);
+    }
+    if (credentialsRpc_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getCredentialsRpc());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -162,6 +203,11 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && getToken()
         .equals(other.getToken());
+    result = result && (hasCredentialsRpc() == other.hasCredentialsRpc());
+    if (hasCredentialsRpc()) {
+      result = result && getCredentialsRpc()
+          .equals(other.getCredentialsRpc());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -175,6 +221,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + TOKEN_FIELD_NUMBER;
     hash = (53 * hash) + getToken().hashCode();
+    if (hasCredentialsRpc()) {
+      hash = (37 * hash) + CREDENTIALSRPC_FIELD_NUMBER;
+      hash = (53 * hash) + getCredentialsRpc().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -310,6 +360,12 @@ private static final long serialVersionUID = 0L;
       super.clear();
       token_ = "";
 
+      if (credentialsRpcBuilder_ == null) {
+        credentialsRpc_ = null;
+      } else {
+        credentialsRpc_ = null;
+        credentialsRpcBuilder_ = null;
+      }
       return this;
     }
 
@@ -337,6 +393,11 @@ private static final long serialVersionUID = 0L;
     public sirup.service.auth.rpc.proto.AuthRequest buildPartial() {
       sirup.service.auth.rpc.proto.AuthRequest result = new sirup.service.auth.rpc.proto.AuthRequest(this);
       result.token_ = token_;
+      if (credentialsRpcBuilder_ == null) {
+        result.credentialsRpc_ = credentialsRpc_;
+      } else {
+        result.credentialsRpc_ = credentialsRpcBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -388,6 +449,9 @@ private static final long serialVersionUID = 0L;
       if (!other.getToken().isEmpty()) {
         token_ = other.token_;
         onChanged();
+      }
+      if (other.hasCredentialsRpc()) {
+        mergeCredentialsRpc(other.getCredentialsRpc());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -485,6 +549,123 @@ private static final long serialVersionUID = 0L;
       token_ = value;
       onChanged();
       return this;
+    }
+
+    private sirup.service.auth.rpc.proto.CredentialsRpc credentialsRpc_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        sirup.service.auth.rpc.proto.CredentialsRpc, sirup.service.auth.rpc.proto.CredentialsRpc.Builder, sirup.service.auth.rpc.proto.CredentialsRpcOrBuilder> credentialsRpcBuilder_;
+    /**
+     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     */
+    public boolean hasCredentialsRpc() {
+      return credentialsRpcBuilder_ != null || credentialsRpc_ != null;
+    }
+    /**
+     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     */
+    public sirup.service.auth.rpc.proto.CredentialsRpc getCredentialsRpc() {
+      if (credentialsRpcBuilder_ == null) {
+        return credentialsRpc_ == null ? sirup.service.auth.rpc.proto.CredentialsRpc.getDefaultInstance() : credentialsRpc_;
+      } else {
+        return credentialsRpcBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     */
+    public Builder setCredentialsRpc(sirup.service.auth.rpc.proto.CredentialsRpc value) {
+      if (credentialsRpcBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        credentialsRpc_ = value;
+        onChanged();
+      } else {
+        credentialsRpcBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     */
+    public Builder setCredentialsRpc(
+        sirup.service.auth.rpc.proto.CredentialsRpc.Builder builderForValue) {
+      if (credentialsRpcBuilder_ == null) {
+        credentialsRpc_ = builderForValue.build();
+        onChanged();
+      } else {
+        credentialsRpcBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     */
+    public Builder mergeCredentialsRpc(sirup.service.auth.rpc.proto.CredentialsRpc value) {
+      if (credentialsRpcBuilder_ == null) {
+        if (credentialsRpc_ != null) {
+          credentialsRpc_ =
+            sirup.service.auth.rpc.proto.CredentialsRpc.newBuilder(credentialsRpc_).mergeFrom(value).buildPartial();
+        } else {
+          credentialsRpc_ = value;
+        }
+        onChanged();
+      } else {
+        credentialsRpcBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     */
+    public Builder clearCredentialsRpc() {
+      if (credentialsRpcBuilder_ == null) {
+        credentialsRpc_ = null;
+        onChanged();
+      } else {
+        credentialsRpc_ = null;
+        credentialsRpcBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     */
+    public sirup.service.auth.rpc.proto.CredentialsRpc.Builder getCredentialsRpcBuilder() {
+      
+      onChanged();
+      return getCredentialsRpcFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     */
+    public sirup.service.auth.rpc.proto.CredentialsRpcOrBuilder getCredentialsRpcOrBuilder() {
+      if (credentialsRpcBuilder_ != null) {
+        return credentialsRpcBuilder_.getMessageOrBuilder();
+      } else {
+        return credentialsRpc_ == null ?
+            sirup.service.auth.rpc.proto.CredentialsRpc.getDefaultInstance() : credentialsRpc_;
+      }
+    }
+    /**
+     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        sirup.service.auth.rpc.proto.CredentialsRpc, sirup.service.auth.rpc.proto.CredentialsRpc.Builder, sirup.service.auth.rpc.proto.CredentialsRpcOrBuilder> 
+        getCredentialsRpcFieldBuilder() {
+      if (credentialsRpcBuilder_ == null) {
+        credentialsRpcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            sirup.service.auth.rpc.proto.CredentialsRpc, sirup.service.auth.rpc.proto.CredentialsRpc.Builder, sirup.service.auth.rpc.proto.CredentialsRpcOrBuilder>(
+                getCredentialsRpc(),
+                getParentForChildren(),
+                isClean());
+        credentialsRpc_ = null;
+      }
+      return credentialsRpcBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

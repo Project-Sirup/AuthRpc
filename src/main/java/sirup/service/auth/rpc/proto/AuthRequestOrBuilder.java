@@ -16,4 +16,17 @@ public interface AuthRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTokenBytes();
+
+  /**
+   * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+   */
+  boolean hasCredentialsRpc();
+  /**
+   * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+   */
+  sirup.service.auth.rpc.proto.CredentialsRpc getCredentialsRpc();
+  /**
+   * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+   */
+  sirup.service.auth.rpc.proto.CredentialsRpcOrBuilder getCredentialsRpcOrBuilder();
 }
