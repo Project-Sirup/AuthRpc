@@ -8,22 +8,12 @@ public interface CredentialsRpcOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string username = 1;</code>
+   * <code>string userID = 1;</code>
    */
-  java.lang.String getUsername();
+  java.lang.String getUserID();
   /**
-   * <code>string username = 1;</code>
+   * <code>string userID = 1;</code>
    */
   com.google.protobuf.ByteString
-      getUsernameBytes();
-
-  /**
-   * <code>string password = 2;</code>
-   */
-  java.lang.String getPassword();
-  /**
-   * <code>string password = 2;</code>
-   */
-  com.google.protobuf.ByteString
-      getPasswordBytes();
+      getUserIDBytes();
 }
