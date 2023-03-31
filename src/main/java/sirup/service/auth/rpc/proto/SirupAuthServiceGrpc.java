@@ -20,38 +20,70 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.15.0)",
     comments = "Source: sirup_auth.proto")
-public final class SirupAuthGrpc {
+public final class SirupAuthServiceGrpc {
 
-  private SirupAuthGrpc() {}
+  private SirupAuthServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "auth.proto.SirupAuth";
+  public static final String SERVICE_NAME = "auth.v2.SirupAuthService";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<sirup.service.auth.rpc.proto.HealthRequest,
+      sirup.service.auth.rpc.proto.HealthResponse> getHealthMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Health",
+      requestType = sirup.service.auth.rpc.proto.HealthRequest.class,
+      responseType = sirup.service.auth.rpc.proto.HealthResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<sirup.service.auth.rpc.proto.HealthRequest,
+      sirup.service.auth.rpc.proto.HealthResponse> getHealthMethod() {
+    io.grpc.MethodDescriptor<sirup.service.auth.rpc.proto.HealthRequest, sirup.service.auth.rpc.proto.HealthResponse> getHealthMethod;
+    if ((getHealthMethod = SirupAuthServiceGrpc.getHealthMethod) == null) {
+      synchronized (SirupAuthServiceGrpc.class) {
+        if ((getHealthMethod = SirupAuthServiceGrpc.getHealthMethod) == null) {
+          SirupAuthServiceGrpc.getHealthMethod = getHealthMethod = 
+              io.grpc.MethodDescriptor.<sirup.service.auth.rpc.proto.HealthRequest, sirup.service.auth.rpc.proto.HealthResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "auth.v2.SirupAuthService", "Health"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  sirup.service.auth.rpc.proto.HealthRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  sirup.service.auth.rpc.proto.HealthResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new SirupAuthServiceMethodDescriptorSupplier("Health"))
+                  .build();
+          }
+        }
+     }
+     return getHealthMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<sirup.service.auth.rpc.proto.TokenRequest,
       sirup.service.auth.rpc.proto.TokenResponse> getTokenMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "token",
+      fullMethodName = SERVICE_NAME + '/' + "Token",
       requestType = sirup.service.auth.rpc.proto.TokenRequest.class,
       responseType = sirup.service.auth.rpc.proto.TokenResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<sirup.service.auth.rpc.proto.TokenRequest,
       sirup.service.auth.rpc.proto.TokenResponse> getTokenMethod() {
     io.grpc.MethodDescriptor<sirup.service.auth.rpc.proto.TokenRequest, sirup.service.auth.rpc.proto.TokenResponse> getTokenMethod;
-    if ((getTokenMethod = SirupAuthGrpc.getTokenMethod) == null) {
-      synchronized (SirupAuthGrpc.class) {
-        if ((getTokenMethod = SirupAuthGrpc.getTokenMethod) == null) {
-          SirupAuthGrpc.getTokenMethod = getTokenMethod = 
+    if ((getTokenMethod = SirupAuthServiceGrpc.getTokenMethod) == null) {
+      synchronized (SirupAuthServiceGrpc.class) {
+        if ((getTokenMethod = SirupAuthServiceGrpc.getTokenMethod) == null) {
+          SirupAuthServiceGrpc.getTokenMethod = getTokenMethod = 
               io.grpc.MethodDescriptor.<sirup.service.auth.rpc.proto.TokenRequest, sirup.service.auth.rpc.proto.TokenResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "auth.proto.SirupAuth", "token"))
+                  "auth.v2.SirupAuthService", "Token"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   sirup.service.auth.rpc.proto.TokenRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   sirup.service.auth.rpc.proto.TokenResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SirupAuthMethodDescriptorSupplier("token"))
+                  .setSchemaDescriptor(new SirupAuthServiceMethodDescriptorSupplier("Token"))
                   .build();
           }
         }
@@ -63,27 +95,27 @@ public final class SirupAuthGrpc {
       sirup.service.auth.rpc.proto.AuthResponse> getAuthMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "auth",
+      fullMethodName = SERVICE_NAME + '/' + "Auth",
       requestType = sirup.service.auth.rpc.proto.AuthRequest.class,
       responseType = sirup.service.auth.rpc.proto.AuthResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<sirup.service.auth.rpc.proto.AuthRequest,
       sirup.service.auth.rpc.proto.AuthResponse> getAuthMethod() {
     io.grpc.MethodDescriptor<sirup.service.auth.rpc.proto.AuthRequest, sirup.service.auth.rpc.proto.AuthResponse> getAuthMethod;
-    if ((getAuthMethod = SirupAuthGrpc.getAuthMethod) == null) {
-      synchronized (SirupAuthGrpc.class) {
-        if ((getAuthMethod = SirupAuthGrpc.getAuthMethod) == null) {
-          SirupAuthGrpc.getAuthMethod = getAuthMethod = 
+    if ((getAuthMethod = SirupAuthServiceGrpc.getAuthMethod) == null) {
+      synchronized (SirupAuthServiceGrpc.class) {
+        if ((getAuthMethod = SirupAuthServiceGrpc.getAuthMethod) == null) {
+          SirupAuthServiceGrpc.getAuthMethod = getAuthMethod = 
               io.grpc.MethodDescriptor.<sirup.service.auth.rpc.proto.AuthRequest, sirup.service.auth.rpc.proto.AuthResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "auth.proto.SirupAuth", "auth"))
+                  "auth.v2.SirupAuthService", "Auth"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   sirup.service.auth.rpc.proto.AuthRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   sirup.service.auth.rpc.proto.AuthResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SirupAuthMethodDescriptorSupplier("auth"))
+                  .setSchemaDescriptor(new SirupAuthServiceMethodDescriptorSupplier("Auth"))
                   .build();
           }
         }
@@ -94,29 +126,36 @@ public final class SirupAuthGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static SirupAuthStub newStub(io.grpc.Channel channel) {
-    return new SirupAuthStub(channel);
+  public static SirupAuthServiceStub newStub(io.grpc.Channel channel) {
+    return new SirupAuthServiceStub(channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static SirupAuthBlockingStub newBlockingStub(
+  public static SirupAuthServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SirupAuthBlockingStub(channel);
+    return new SirupAuthServiceBlockingStub(channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static SirupAuthFutureStub newFutureStub(
+  public static SirupAuthServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SirupAuthFutureStub(channel);
+    return new SirupAuthServiceFutureStub(channel);
   }
 
   /**
    */
-  public static abstract class SirupAuthImplBase implements io.grpc.BindableService {
+  public static abstract class SirupAuthServiceImplBase implements io.grpc.BindableService {
+
+    /**
+     */
+    public void health(sirup.service.auth.rpc.proto.HealthRequest request,
+        io.grpc.stub.StreamObserver<sirup.service.auth.rpc.proto.HealthResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getHealthMethod(), responseObserver);
+    }
 
     /**
      */
@@ -134,6 +173,13 @@ public final class SirupAuthGrpc {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getHealthMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                sirup.service.auth.rpc.proto.HealthRequest,
+                sirup.service.auth.rpc.proto.HealthResponse>(
+                  this, METHODID_HEALTH)))
           .addMethod(
             getTokenMethod(),
             asyncUnaryCall(
@@ -154,20 +200,28 @@ public final class SirupAuthGrpc {
 
   /**
    */
-  public static final class SirupAuthStub extends io.grpc.stub.AbstractStub<SirupAuthStub> {
-    private SirupAuthStub(io.grpc.Channel channel) {
+  public static final class SirupAuthServiceStub extends io.grpc.stub.AbstractStub<SirupAuthServiceStub> {
+    private SirupAuthServiceStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private SirupAuthStub(io.grpc.Channel channel,
+    private SirupAuthServiceStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SirupAuthStub build(io.grpc.Channel channel,
+    protected SirupAuthServiceStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new SirupAuthStub(channel, callOptions);
+      return new SirupAuthServiceStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public void health(sirup.service.auth.rpc.proto.HealthRequest request,
+        io.grpc.stub.StreamObserver<sirup.service.auth.rpc.proto.HealthResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getHealthMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -189,20 +243,27 @@ public final class SirupAuthGrpc {
 
   /**
    */
-  public static final class SirupAuthBlockingStub extends io.grpc.stub.AbstractStub<SirupAuthBlockingStub> {
-    private SirupAuthBlockingStub(io.grpc.Channel channel) {
+  public static final class SirupAuthServiceBlockingStub extends io.grpc.stub.AbstractStub<SirupAuthServiceBlockingStub> {
+    private SirupAuthServiceBlockingStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private SirupAuthBlockingStub(io.grpc.Channel channel,
+    private SirupAuthServiceBlockingStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SirupAuthBlockingStub build(io.grpc.Channel channel,
+    protected SirupAuthServiceBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new SirupAuthBlockingStub(channel, callOptions);
+      return new SirupAuthServiceBlockingStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public sirup.service.auth.rpc.proto.HealthResponse health(sirup.service.auth.rpc.proto.HealthRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getHealthMethod(), getCallOptions(), request);
     }
 
     /**
@@ -222,20 +283,28 @@ public final class SirupAuthGrpc {
 
   /**
    */
-  public static final class SirupAuthFutureStub extends io.grpc.stub.AbstractStub<SirupAuthFutureStub> {
-    private SirupAuthFutureStub(io.grpc.Channel channel) {
+  public static final class SirupAuthServiceFutureStub extends io.grpc.stub.AbstractStub<SirupAuthServiceFutureStub> {
+    private SirupAuthServiceFutureStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private SirupAuthFutureStub(io.grpc.Channel channel,
+    private SirupAuthServiceFutureStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SirupAuthFutureStub build(io.grpc.Channel channel,
+    protected SirupAuthServiceFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new SirupAuthFutureStub(channel, callOptions);
+      return new SirupAuthServiceFutureStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<sirup.service.auth.rpc.proto.HealthResponse> health(
+        sirup.service.auth.rpc.proto.HealthRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getHealthMethod(), getCallOptions()), request);
     }
 
     /**
@@ -255,18 +324,19 @@ public final class SirupAuthGrpc {
     }
   }
 
-  private static final int METHODID_TOKEN = 0;
-  private static final int METHODID_AUTH = 1;
+  private static final int METHODID_HEALTH = 0;
+  private static final int METHODID_TOKEN = 1;
+  private static final int METHODID_AUTH = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SirupAuthImplBase serviceImpl;
+    private final SirupAuthServiceImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(SirupAuthImplBase serviceImpl, int methodId) {
+    MethodHandlers(SirupAuthServiceImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -275,6 +345,10 @@ public final class SirupAuthGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_HEALTH:
+          serviceImpl.health((sirup.service.auth.rpc.proto.HealthRequest) request,
+              (io.grpc.stub.StreamObserver<sirup.service.auth.rpc.proto.HealthResponse>) responseObserver);
+          break;
         case METHODID_TOKEN:
           serviceImpl.token((sirup.service.auth.rpc.proto.TokenRequest) request,
               (io.grpc.stub.StreamObserver<sirup.service.auth.rpc.proto.TokenResponse>) responseObserver);
@@ -299,9 +373,9 @@ public final class SirupAuthGrpc {
     }
   }
 
-  private static abstract class SirupAuthBaseDescriptorSupplier
+  private static abstract class SirupAuthServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    SirupAuthBaseDescriptorSupplier() {}
+    SirupAuthServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
@@ -310,21 +384,21 @@ public final class SirupAuthGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("SirupAuth");
+      return getFileDescriptor().findServiceByName("SirupAuthService");
     }
   }
 
-  private static final class SirupAuthFileDescriptorSupplier
-      extends SirupAuthBaseDescriptorSupplier {
-    SirupAuthFileDescriptorSupplier() {}
+  private static final class SirupAuthServiceFileDescriptorSupplier
+      extends SirupAuthServiceBaseDescriptorSupplier {
+    SirupAuthServiceFileDescriptorSupplier() {}
   }
 
-  private static final class SirupAuthMethodDescriptorSupplier
-      extends SirupAuthBaseDescriptorSupplier
+  private static final class SirupAuthServiceMethodDescriptorSupplier
+      extends SirupAuthServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
-    SirupAuthMethodDescriptorSupplier(String methodName) {
+    SirupAuthServiceMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
@@ -339,11 +413,12 @@ public final class SirupAuthGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (SirupAuthGrpc.class) {
+      synchronized (SirupAuthServiceGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new SirupAuthFileDescriptorSupplier())
+              .setSchemaDescriptor(new SirupAuthServiceFileDescriptorSupplier())
+              .addMethod(getHealthMethod())
               .addMethod(getTokenMethod())
               .addMethod(getAuthMethod())
               .build();

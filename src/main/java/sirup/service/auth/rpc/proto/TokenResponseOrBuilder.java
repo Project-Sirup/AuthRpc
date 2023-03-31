@@ -4,19 +4,19 @@
 package sirup.service.auth.rpc.proto;
 
 public interface TokenResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:auth.proto.TokenResponse)
+    // @@protoc_insertion_point(interface_extends:auth.v2.TokenResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.auth.proto.ErrorRpc error = 1;</code>
+   * <code>.auth.v2.ErrorRpc error = 1;</code>
    */
   boolean hasError();
   /**
-   * <code>.auth.proto.ErrorRpc error = 1;</code>
+   * <code>.auth.v2.ErrorRpc error = 1;</code>
    */
   sirup.service.auth.rpc.proto.ErrorRpc getError();
   /**
-   * <code>.auth.proto.ErrorRpc error = 1;</code>
+   * <code>.auth.v2.ErrorRpc error = 1;</code>
    */
   sirup.service.auth.rpc.proto.ErrorRpcOrBuilder getErrorOrBuilder();
 

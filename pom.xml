@@ -6,7 +6,7 @@
 
     <groupId>sirup.service.auth.rpc.proto</groupId>
     <artifactId>auth-rpc</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <packaging>jar</packaging>
     
     <distributionManagement>
@@ -60,7 +60,7 @@
                             <includeMavenTypes>direct</includeMavenTypes>
 
                             <inputDirectories>
-                                <include>./../proto</include>
+                                <include>./../proto/auth/v2</include>
                             </inputDirectories>
 
                             <outputTargets>

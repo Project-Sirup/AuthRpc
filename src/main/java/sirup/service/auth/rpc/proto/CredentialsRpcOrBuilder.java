@@ -4,16 +4,16 @@
 package sirup.service.auth.rpc.proto;
 
 public interface CredentialsRpcOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:auth.proto.CredentialsRpc)
+    // @@protoc_insertion_point(interface_extends:auth.v2.CredentialsRpc)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string userID = 1;</code>
+   * <code>string user_id = 1;</code>
    */
-  java.lang.String getUserID();
+  java.lang.String getUserId();
   /**
-   * <code>string userID = 1;</code>
+   * <code>string user_id = 1;</code>
    */
   com.google.protobuf.ByteString
-      getUserIDBytes();
+      getUserIdBytes();
 }

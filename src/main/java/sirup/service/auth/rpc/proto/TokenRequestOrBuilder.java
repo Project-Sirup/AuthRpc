@@ -4,19 +4,19 @@
 package sirup.service.auth.rpc.proto;
 
 public interface TokenRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:auth.proto.TokenRequest)
+    // @@protoc_insertion_point(interface_extends:auth.v2.TokenRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.auth.proto.CredentialsRpc credentials = 1;</code>
+   * <code>.auth.v2.CredentialsRpc credentials = 1;</code>
    */
   boolean hasCredentials();
   /**
-   * <code>.auth.proto.CredentialsRpc credentials = 1;</code>
+   * <code>.auth.v2.CredentialsRpc credentials = 1;</code>
    */
   sirup.service.auth.rpc.proto.CredentialsRpc getCredentials();
   /**
-   * <code>.auth.proto.CredentialsRpc credentials = 1;</code>
+   * <code>.auth.v2.CredentialsRpc credentials = 1;</code>
    */
   sirup.service.auth.rpc.proto.CredentialsRpcOrBuilder getCredentialsOrBuilder();
 }

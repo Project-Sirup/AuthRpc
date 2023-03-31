@@ -4,20 +4,19 @@
 package sirup.service.auth.rpc.proto;
 
 /**
- * Protobuf type {@code auth.v2.ErrorRpc}
+ * Protobuf type {@code auth.v2.HealthResponse}
  */
-public  final class ErrorRpc extends
+public  final class HealthResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:auth.v2.ErrorRpc)
-    ErrorRpcOrBuilder {
+    // @@protoc_insertion_point(message_implements:auth.v2.HealthResponse)
+    HealthResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ErrorRpc.newBuilder() to construct.
-  private ErrorRpc(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use HealthResponse.newBuilder() to construct.
+  private HealthResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ErrorRpc() {
-    status_ = 0;
-    errorMessage_ = "";
+  private HealthResponse() {
+    healthCode_ = 0;
   }
 
   @java.lang.Override
@@ -25,7 +24,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private ErrorRpc(
+  private HealthResponse(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -46,13 +45,7 @@ private static final long serialVersionUID = 0L;
             break;
           case 8: {
 
-            status_ = input.readInt32();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            errorMessage_ = s;
+            healthCode_ = input.readInt32();
             break;
           }
           default: {
@@ -76,58 +69,24 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_ErrorRpc_descriptor;
+    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_HealthResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_ErrorRpc_fieldAccessorTable
+    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_HealthResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            sirup.service.auth.rpc.proto.ErrorRpc.class, sirup.service.auth.rpc.proto.ErrorRpc.Builder.class);
+            sirup.service.auth.rpc.proto.HealthResponse.class, sirup.service.auth.rpc.proto.HealthResponse.Builder.class);
   }
 
-  public static final int STATUS_FIELD_NUMBER = 1;
-  private int status_;
+  public static final int HEALTH_CODE_FIELD_NUMBER = 1;
+  private int healthCode_;
   /**
-   * <code>int32 status = 1;</code>
+   * <code>int32 health_code = 1;</code>
    */
-  public int getStatus() {
-    return status_;
-  }
-
-  public static final int ERROR_MESSAGE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object errorMessage_;
-  /**
-   * <code>string error_message = 2;</code>
-   */
-  public java.lang.String getErrorMessage() {
-    java.lang.Object ref = errorMessage_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      errorMessage_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string error_message = 2;</code>
-   */
-  public com.google.protobuf.ByteString
-      getErrorMessageBytes() {
-    java.lang.Object ref = errorMessage_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      errorMessage_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public int getHealthCode() {
+    return healthCode_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -144,11 +103,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (status_ != 0) {
-      output.writeInt32(1, status_);
-    }
-    if (!getErrorMessageBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, errorMessage_);
+    if (healthCode_ != 0) {
+      output.writeInt32(1, healthCode_);
     }
     unknownFields.writeTo(output);
   }
@@ -159,12 +115,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (status_ != 0) {
+    if (healthCode_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(1, status_);
-    }
-    if (!getErrorMessageBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, errorMessage_);
+        .computeInt32Size(1, healthCode_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -176,16 +129,14 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof sirup.service.auth.rpc.proto.ErrorRpc)) {
+    if (!(obj instanceof sirup.service.auth.rpc.proto.HealthResponse)) {
       return super.equals(obj);
     }
-    sirup.service.auth.rpc.proto.ErrorRpc other = (sirup.service.auth.rpc.proto.ErrorRpc) obj;
+    sirup.service.auth.rpc.proto.HealthResponse other = (sirup.service.auth.rpc.proto.HealthResponse) obj;
 
     boolean result = true;
-    result = result && (getStatus()
-        == other.getStatus());
-    result = result && getErrorMessage()
-        .equals(other.getErrorMessage());
+    result = result && (getHealthCode()
+        == other.getHealthCode());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -197,78 +148,76 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + STATUS_FIELD_NUMBER;
-    hash = (53 * hash) + getStatus();
-    hash = (37 * hash) + ERROR_MESSAGE_FIELD_NUMBER;
-    hash = (53 * hash) + getErrorMessage().hashCode();
+    hash = (37 * hash) + HEALTH_CODE_FIELD_NUMBER;
+    hash = (53 * hash) + getHealthCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static sirup.service.auth.rpc.proto.ErrorRpc parseFrom(
+  public static sirup.service.auth.rpc.proto.HealthResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sirup.service.auth.rpc.proto.ErrorRpc parseFrom(
+  public static sirup.service.auth.rpc.proto.HealthResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sirup.service.auth.rpc.proto.ErrorRpc parseFrom(
+  public static sirup.service.auth.rpc.proto.HealthResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sirup.service.auth.rpc.proto.ErrorRpc parseFrom(
+  public static sirup.service.auth.rpc.proto.HealthResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sirup.service.auth.rpc.proto.ErrorRpc parseFrom(byte[] data)
+  public static sirup.service.auth.rpc.proto.HealthResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sirup.service.auth.rpc.proto.ErrorRpc parseFrom(
+  public static sirup.service.auth.rpc.proto.HealthResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sirup.service.auth.rpc.proto.ErrorRpc parseFrom(java.io.InputStream input)
+  public static sirup.service.auth.rpc.proto.HealthResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static sirup.service.auth.rpc.proto.ErrorRpc parseFrom(
+  public static sirup.service.auth.rpc.proto.HealthResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static sirup.service.auth.rpc.proto.ErrorRpc parseDelimitedFrom(java.io.InputStream input)
+  public static sirup.service.auth.rpc.proto.HealthResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static sirup.service.auth.rpc.proto.ErrorRpc parseDelimitedFrom(
+  public static sirup.service.auth.rpc.proto.HealthResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static sirup.service.auth.rpc.proto.ErrorRpc parseFrom(
+  public static sirup.service.auth.rpc.proto.HealthResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static sirup.service.auth.rpc.proto.ErrorRpc parseFrom(
+  public static sirup.service.auth.rpc.proto.HealthResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -281,7 +230,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(sirup.service.auth.rpc.proto.ErrorRpc prototype) {
+  public static Builder newBuilder(sirup.service.auth.rpc.proto.HealthResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -297,26 +246,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code auth.v2.ErrorRpc}
+   * Protobuf type {@code auth.v2.HealthResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:auth.v2.ErrorRpc)
-      sirup.service.auth.rpc.proto.ErrorRpcOrBuilder {
+      // @@protoc_insertion_point(builder_implements:auth.v2.HealthResponse)
+      sirup.service.auth.rpc.proto.HealthResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_ErrorRpc_descriptor;
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_HealthResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_ErrorRpc_fieldAccessorTable
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_HealthResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              sirup.service.auth.rpc.proto.ErrorRpc.class, sirup.service.auth.rpc.proto.ErrorRpc.Builder.class);
+              sirup.service.auth.rpc.proto.HealthResponse.class, sirup.service.auth.rpc.proto.HealthResponse.Builder.class);
     }
 
-    // Construct using sirup.service.auth.rpc.proto.ErrorRpc.newBuilder()
+    // Construct using sirup.service.auth.rpc.proto.HealthResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -334,9 +283,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      status_ = 0;
-
-      errorMessage_ = "";
+      healthCode_ = 0;
 
       return this;
     }
@@ -344,17 +291,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_ErrorRpc_descriptor;
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_HealthResponse_descriptor;
     }
 
     @java.lang.Override
-    public sirup.service.auth.rpc.proto.ErrorRpc getDefaultInstanceForType() {
-      return sirup.service.auth.rpc.proto.ErrorRpc.getDefaultInstance();
+    public sirup.service.auth.rpc.proto.HealthResponse getDefaultInstanceForType() {
+      return sirup.service.auth.rpc.proto.HealthResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public sirup.service.auth.rpc.proto.ErrorRpc build() {
-      sirup.service.auth.rpc.proto.ErrorRpc result = buildPartial();
+    public sirup.service.auth.rpc.proto.HealthResponse build() {
+      sirup.service.auth.rpc.proto.HealthResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -362,10 +309,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public sirup.service.auth.rpc.proto.ErrorRpc buildPartial() {
-      sirup.service.auth.rpc.proto.ErrorRpc result = new sirup.service.auth.rpc.proto.ErrorRpc(this);
-      result.status_ = status_;
-      result.errorMessage_ = errorMessage_;
+    public sirup.service.auth.rpc.proto.HealthResponse buildPartial() {
+      sirup.service.auth.rpc.proto.HealthResponse result = new sirup.service.auth.rpc.proto.HealthResponse(this);
+      result.healthCode_ = healthCode_;
       onBuilt();
       return result;
     }
@@ -404,22 +350,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof sirup.service.auth.rpc.proto.ErrorRpc) {
-        return mergeFrom((sirup.service.auth.rpc.proto.ErrorRpc)other);
+      if (other instanceof sirup.service.auth.rpc.proto.HealthResponse) {
+        return mergeFrom((sirup.service.auth.rpc.proto.HealthResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(sirup.service.auth.rpc.proto.ErrorRpc other) {
-      if (other == sirup.service.auth.rpc.proto.ErrorRpc.getDefaultInstance()) return this;
-      if (other.getStatus() != 0) {
-        setStatus(other.getStatus());
-      }
-      if (!other.getErrorMessage().isEmpty()) {
-        errorMessage_ = other.errorMessage_;
-        onChanged();
+    public Builder mergeFrom(sirup.service.auth.rpc.proto.HealthResponse other) {
+      if (other == sirup.service.auth.rpc.proto.HealthResponse.getDefaultInstance()) return this;
+      if (other.getHealthCode() != 0) {
+        setHealthCode(other.getHealthCode());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -436,11 +378,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      sirup.service.auth.rpc.proto.ErrorRpc parsedMessage = null;
+      sirup.service.auth.rpc.proto.HealthResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (sirup.service.auth.rpc.proto.ErrorRpc) e.getUnfinishedMessage();
+        parsedMessage = (sirup.service.auth.rpc.proto.HealthResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -450,97 +392,28 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int status_ ;
+    private int healthCode_ ;
     /**
-     * <code>int32 status = 1;</code>
+     * <code>int32 health_code = 1;</code>
      */
-    public int getStatus() {
-      return status_;
+    public int getHealthCode() {
+      return healthCode_;
     }
     /**
-     * <code>int32 status = 1;</code>
+     * <code>int32 health_code = 1;</code>
      */
-    public Builder setStatus(int value) {
+    public Builder setHealthCode(int value) {
       
-      status_ = value;
+      healthCode_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 status = 1;</code>
+     * <code>int32 health_code = 1;</code>
      */
-    public Builder clearStatus() {
+    public Builder clearHealthCode() {
       
-      status_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object errorMessage_ = "";
-    /**
-     * <code>string error_message = 2;</code>
-     */
-    public java.lang.String getErrorMessage() {
-      java.lang.Object ref = errorMessage_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        errorMessage_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string error_message = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getErrorMessageBytes() {
-      java.lang.Object ref = errorMessage_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        errorMessage_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string error_message = 2;</code>
-     */
-    public Builder setErrorMessage(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      errorMessage_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string error_message = 2;</code>
-     */
-    public Builder clearErrorMessage() {
-      
-      errorMessage_ = getDefaultInstance().getErrorMessage();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string error_message = 2;</code>
-     */
-    public Builder setErrorMessageBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      errorMessage_ = value;
+      healthCode_ = 0;
       onChanged();
       return this;
     }
@@ -557,41 +430,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:auth.v2.ErrorRpc)
+    // @@protoc_insertion_point(builder_scope:auth.v2.HealthResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:auth.v2.ErrorRpc)
-  private static final sirup.service.auth.rpc.proto.ErrorRpc DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:auth.v2.HealthResponse)
+  private static final sirup.service.auth.rpc.proto.HealthResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new sirup.service.auth.rpc.proto.ErrorRpc();
+    DEFAULT_INSTANCE = new sirup.service.auth.rpc.proto.HealthResponse();
   }
 
-  public static sirup.service.auth.rpc.proto.ErrorRpc getDefaultInstance() {
+  public static sirup.service.auth.rpc.proto.HealthResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ErrorRpc>
-      PARSER = new com.google.protobuf.AbstractParser<ErrorRpc>() {
+  private static final com.google.protobuf.Parser<HealthResponse>
+      PARSER = new com.google.protobuf.AbstractParser<HealthResponse>() {
     @java.lang.Override
-    public ErrorRpc parsePartialFrom(
+    public HealthResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ErrorRpc(input, extensionRegistry);
+      return new HealthResponse(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<ErrorRpc> parser() {
+  public static com.google.protobuf.Parser<HealthResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ErrorRpc> getParserForType() {
+  public com.google.protobuf.Parser<HealthResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public sirup.service.auth.rpc.proto.ErrorRpc getDefaultInstanceForType() {
+  public sirup.service.auth.rpc.proto.HealthResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

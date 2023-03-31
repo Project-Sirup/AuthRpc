@@ -12,10 +12,10 @@ public class AuthClient {
     private static int port;
     private static AuthClient instance;
     private ManagedChannel managedChannel;
-    private SirupAuthGrpc.SirupAuthBlockingStub authService;
+    private SirupAuthServiceGrpc.SirupAuthServiceBlockingStub authService;
     private AuthClient() {
         managedChannel = ManagedChannelBuilder.forAddress(address,port).usePlaintext().build();
-        authService = SirupAuthGrpc.newBlockingStub(managedChannel);
+        authService = SirupAuthServiceGrpc.newBlockingStub(managedChannel);
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             try {
                 managedChannel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
@@ -34,10 +34,21 @@ public class AuthClient {
         return instance == null ? instance = new AuthClient() : instance;
     }
 
+    public int health() {
+        HealthRequest request = HealthRequest.newBuilder().build();
+        HealthResponse response;
+        try {
+            response = authService.health(request);
+        } catch (StatusRuntimeException e) {
+            throw new AuthServiceUnavailableException(e.getMessage());
+        }
+        return response.getHealthCode();
+    }
+
     public boolean auth(String token, String userId) throws AuthServiceUnavailableException {
         AuthRequest request = AuthRequest.newBuilder()
                 .setToken(token)
-                .setCredentialsRpc(CredentialsRpc.newBuilder().setUserID(userId))
+                .setCredentialsRpc(CredentialsRpc.newBuilder().setUserId(userId))
                 .build();
         AuthResponse response;
         try {
@@ -49,7 +60,7 @@ public class AuthClient {
     }
 
     public String token(String userId) throws AuthServiceUnavailableException {
-        TokenRequest request = TokenRequest.newBuilder().setCredentials(CredentialsRpc.newBuilder().setUserID(userId)).build();
+        TokenRequest request = TokenRequest.newBuilder().setCredentials(CredentialsRpc.newBuilder().setUserId(userId)).build();
         TokenResponse response;
         try {
             response = authService.token(request);

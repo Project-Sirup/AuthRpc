@@ -4,11 +4,11 @@
 package sirup.service.auth.rpc.proto;
 
 /**
- * Protobuf type {@code auth.proto.AuthRequest}
+ * Protobuf type {@code auth.v2.AuthRequest}
  */
 public  final class AuthRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:auth.proto.AuthRequest)
+    // @@protoc_insertion_point(message_implements:auth.v2.AuthRequest)
     AuthRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use AuthRequest.newBuilder() to construct.
@@ -83,13 +83,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_proto_AuthRequest_descriptor;
+    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_AuthRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_proto_AuthRequest_fieldAccessorTable
+    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_AuthRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             sirup.service.auth.rpc.proto.AuthRequest.class, sirup.service.auth.rpc.proto.AuthRequest.Builder.class);
   }
@@ -128,22 +128,22 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CREDENTIALSRPC_FIELD_NUMBER = 2;
+  public static final int CREDENTIALS_RPC_FIELD_NUMBER = 2;
   private sirup.service.auth.rpc.proto.CredentialsRpc credentialsRpc_;
   /**
-   * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+   * <code>.auth.v2.CredentialsRpc credentials_rpc = 2;</code>
    */
   public boolean hasCredentialsRpc() {
     return credentialsRpc_ != null;
   }
   /**
-   * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+   * <code>.auth.v2.CredentialsRpc credentials_rpc = 2;</code>
    */
   public sirup.service.auth.rpc.proto.CredentialsRpc getCredentialsRpc() {
     return credentialsRpc_ == null ? sirup.service.auth.rpc.proto.CredentialsRpc.getDefaultInstance() : credentialsRpc_;
   }
   /**
-   * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+   * <code>.auth.v2.CredentialsRpc credentials_rpc = 2;</code>
    */
   public sirup.service.auth.rpc.proto.CredentialsRpcOrBuilder getCredentialsRpcOrBuilder() {
     return getCredentialsRpc();
@@ -222,7 +222,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TOKEN_FIELD_NUMBER;
     hash = (53 * hash) + getToken().hashCode();
     if (hasCredentialsRpc()) {
-      hash = (37 * hash) + CREDENTIALSRPC_FIELD_NUMBER;
+      hash = (37 * hash) + CREDENTIALS_RPC_FIELD_NUMBER;
       hash = (53 * hash) + getCredentialsRpc().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
@@ -321,21 +321,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code auth.proto.AuthRequest}
+   * Protobuf type {@code auth.v2.AuthRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:auth.proto.AuthRequest)
+      // @@protoc_insertion_point(builder_implements:auth.v2.AuthRequest)
       sirup.service.auth.rpc.proto.AuthRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_proto_AuthRequest_descriptor;
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_AuthRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_proto_AuthRequest_fieldAccessorTable
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_AuthRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               sirup.service.auth.rpc.proto.AuthRequest.class, sirup.service.auth.rpc.proto.AuthRequest.Builder.class);
     }
@@ -372,7 +372,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_proto_AuthRequest_descriptor;
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_AuthRequest_descriptor;
     }
 
     @java.lang.Override
@@ -555,13 +555,13 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         sirup.service.auth.rpc.proto.CredentialsRpc, sirup.service.auth.rpc.proto.CredentialsRpc.Builder, sirup.service.auth.rpc.proto.CredentialsRpcOrBuilder> credentialsRpcBuilder_;
     /**
-     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     * <code>.auth.v2.CredentialsRpc credentials_rpc = 2;</code>
      */
     public boolean hasCredentialsRpc() {
       return credentialsRpcBuilder_ != null || credentialsRpc_ != null;
     }
     /**
-     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     * <code>.auth.v2.CredentialsRpc credentials_rpc = 2;</code>
      */
     public sirup.service.auth.rpc.proto.CredentialsRpc getCredentialsRpc() {
       if (credentialsRpcBuilder_ == null) {
@@ -571,7 +571,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     * <code>.auth.v2.CredentialsRpc credentials_rpc = 2;</code>
      */
     public Builder setCredentialsRpc(sirup.service.auth.rpc.proto.CredentialsRpc value) {
       if (credentialsRpcBuilder_ == null) {
@@ -587,7 +587,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     * <code>.auth.v2.CredentialsRpc credentials_rpc = 2;</code>
      */
     public Builder setCredentialsRpc(
         sirup.service.auth.rpc.proto.CredentialsRpc.Builder builderForValue) {
@@ -601,7 +601,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     * <code>.auth.v2.CredentialsRpc credentials_rpc = 2;</code>
      */
     public Builder mergeCredentialsRpc(sirup.service.auth.rpc.proto.CredentialsRpc value) {
       if (credentialsRpcBuilder_ == null) {
@@ -619,7 +619,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     * <code>.auth.v2.CredentialsRpc credentials_rpc = 2;</code>
      */
     public Builder clearCredentialsRpc() {
       if (credentialsRpcBuilder_ == null) {
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     * <code>.auth.v2.CredentialsRpc credentials_rpc = 2;</code>
      */
     public sirup.service.auth.rpc.proto.CredentialsRpc.Builder getCredentialsRpcBuilder() {
       
@@ -641,7 +641,7 @@ private static final long serialVersionUID = 0L;
       return getCredentialsRpcFieldBuilder().getBuilder();
     }
     /**
-     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     * <code>.auth.v2.CredentialsRpc credentials_rpc = 2;</code>
      */
     public sirup.service.auth.rpc.proto.CredentialsRpcOrBuilder getCredentialsRpcOrBuilder() {
       if (credentialsRpcBuilder_ != null) {
@@ -652,7 +652,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.auth.proto.CredentialsRpc CredentialsRpc = 2;</code>
+     * <code>.auth.v2.CredentialsRpc credentials_rpc = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         sirup.service.auth.rpc.proto.CredentialsRpc, sirup.service.auth.rpc.proto.CredentialsRpc.Builder, sirup.service.auth.rpc.proto.CredentialsRpcOrBuilder> 
@@ -680,10 +680,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:auth.proto.AuthRequest)
+    // @@protoc_insertion_point(builder_scope:auth.v2.AuthRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:auth.proto.AuthRequest)
+  // @@protoc_insertion_point(class_scope:auth.v2.AuthRequest)
   private static final sirup.service.auth.rpc.proto.AuthRequest DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new sirup.service.auth.rpc.proto.AuthRequest();

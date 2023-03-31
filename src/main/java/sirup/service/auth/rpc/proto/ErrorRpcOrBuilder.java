@@ -4,7 +4,7 @@
 package sirup.service.auth.rpc.proto;
 
 public interface ErrorRpcOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:auth.proto.ErrorRpc)
+    // @@protoc_insertion_point(interface_extends:auth.v2.ErrorRpc)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -13,11 +13,11 @@ public interface ErrorRpcOrBuilder extends
   int getStatus();
 
   /**
-   * <code>string errorMessage = 2;</code>
+   * <code>string error_message = 2;</code>
    */
   java.lang.String getErrorMessage();
   /**
-   * <code>string errorMessage = 2;</code>
+   * <code>string error_message = 2;</code>
    */
   com.google.protobuf.ByteString
       getErrorMessageBytes();
