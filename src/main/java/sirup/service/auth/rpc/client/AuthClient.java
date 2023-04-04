@@ -45,10 +45,12 @@ public class AuthClient {
         return response.getHealthCode();
     }
 
-    public boolean auth(String token, String userId) throws AuthServiceUnavailableException {
+    public boolean auth(String token, String userId, int systemAccess) throws AuthServiceUnavailableException {
         AuthRequest request = AuthRequest.newBuilder()
                 .setToken(token)
-                .setCredentialsRpc(CredentialsRpc.newBuilder().setUserId(userId))
+                .setCredentialsRpc(CredentialsRpc.newBuilder()
+                        .setUserId(userId)
+                        .setSystemAccess(systemAccess))
                 .build();
         AuthResponse response;
         try {
@@ -59,8 +61,11 @@ public class AuthClient {
         return response.getTokenValid();
     }
 
-    public String token(String userId) throws AuthServiceUnavailableException {
-        TokenRequest request = TokenRequest.newBuilder().setCredentials(CredentialsRpc.newBuilder().setUserId(userId)).build();
+    public String token(String userId, int systemAccess) throws AuthServiceUnavailableException {
+        TokenRequest request = TokenRequest.newBuilder()
+                .setCredentials(CredentialsRpc.newBuilder()
+                        .setUserId(userId)
+                        .setSystemAccess(systemAccess)).build();
         TokenResponse response;
         try {
             response = authService.token(request);

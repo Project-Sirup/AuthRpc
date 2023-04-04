@@ -72,15 +72,15 @@ public final class Auth {
       "\t\0220\n\017credentials_rpc\030\002 \001(\0132\027.auth.v2.Cre" +
       "dentialsRpc\"E\n\014AuthResponse\022 \n\005error\030\001 \001" +
       "(\0132\021.auth.v2.ErrorRpc\022\023\n\013token_valid\030\002 \001" +
-      "(\010\"!\n\016CredentialsRpc\022\017\n\007user_id\030\001 \001(\t\"1\n" +
-      "\010ErrorRpc\022\016\n\006status\030\001 \001(\005\022\025\n\rerror_messa" +
-      "ge\030\002 \001(\t2\300\001\n\020SirupAuthService\022;\n\006Health\022" +
-      "\026.auth.v2.HealthRequest\032\027.auth.v2.Health" +
-      "Response\"\000\0228\n\005Token\022\025.auth.v2.TokenReque" +
-      "st\032\026.auth.v2.TokenResponse\"\000\0225\n\004Auth\022\024.a" +
-      "uth.v2.AuthRequest\032\025.auth.v2.AuthRespons" +
-      "e\"\000B,\n\034sirup.service.auth.rpc.protoB\004Aut" +
-      "hP\001\242\002\003SASb\006proto3"
+      "(\010\"8\n\016CredentialsRpc\022\017\n\007user_id\030\001 \001(\t\022\025\n" +
+      "\rsystem_access\030\002 \001(\005\"1\n\010ErrorRpc\022\016\n\006stat" +
+      "us\030\001 \001(\005\022\025\n\rerror_message\030\002 \001(\t2\300\001\n\020Siru" +
+      "pAuthService\022;\n\006Health\022\026.auth.v2.HealthR" +
+      "equest\032\027.auth.v2.HealthResponse\"\000\0228\n\005Tok" +
+      "en\022\025.auth.v2.TokenRequest\032\026.auth.v2.Toke" +
+      "nResponse\"\000\0225\n\004Auth\022\024.auth.v2.AuthReques" +
+      "t\032\025.auth.v2.AuthResponse\"\000B,\n\034sirup.serv" +
+      "ice.auth.rpc.protoB\004AuthP\001\242\002\003SASb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -135,7 +135,7 @@ public final class Auth {
     internal_static_auth_v2_CredentialsRpc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_auth_v2_CredentialsRpc_descriptor,
-        new java.lang.String[] { "UserId", });
+        new java.lang.String[] { "UserId", "SystemAccess", });
     internal_static_auth_v2_ErrorRpc_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_auth_v2_ErrorRpc_fieldAccessorTable = new

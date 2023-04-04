@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private CredentialsRpc() {
     userId_ = "";
+    systemAccess_ = 0;
   }
 
   @java.lang.Override
@@ -47,6 +48,11 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
 
             userId_ = s;
+            break;
+          }
+          case 16: {
+
+            systemAccess_ = input.readInt32();
             break;
           }
           default: {
@@ -115,6 +121,15 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int SYSTEM_ACCESS_FIELD_NUMBER = 2;
+  private int systemAccess_;
+  /**
+   * <code>int32 system_access = 2;</code>
+   */
+  public int getSystemAccess() {
+    return systemAccess_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -132,6 +147,9 @@ private static final long serialVersionUID = 0L;
     if (!getUserIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
     }
+    if (systemAccess_ != 0) {
+      output.writeInt32(2, systemAccess_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -143,6 +161,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!getUserIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
+    }
+    if (systemAccess_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(2, systemAccess_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -162,6 +184,8 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && getUserId()
         .equals(other.getUserId());
+    result = result && (getSystemAccess()
+        == other.getSystemAccess());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -175,6 +199,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUserId().hashCode();
+    hash = (37 * hash) + SYSTEM_ACCESS_FIELD_NUMBER;
+    hash = (53 * hash) + getSystemAccess();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -310,6 +336,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       userId_ = "";
 
+      systemAccess_ = 0;
+
       return this;
     }
 
@@ -337,6 +365,7 @@ private static final long serialVersionUID = 0L;
     public sirup.service.auth.rpc.proto.CredentialsRpc buildPartial() {
       sirup.service.auth.rpc.proto.CredentialsRpc result = new sirup.service.auth.rpc.proto.CredentialsRpc(this);
       result.userId_ = userId_;
+      result.systemAccess_ = systemAccess_;
       onBuilt();
       return result;
     }
@@ -388,6 +417,9 @@ private static final long serialVersionUID = 0L;
       if (!other.getUserId().isEmpty()) {
         userId_ = other.userId_;
         onChanged();
+      }
+      if (other.getSystemAccess() != 0) {
+        setSystemAccess(other.getSystemAccess());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -483,6 +515,32 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       userId_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int systemAccess_ ;
+    /**
+     * <code>int32 system_access = 2;</code>
+     */
+    public int getSystemAccess() {
+      return systemAccess_;
+    }
+    /**
+     * <code>int32 system_access = 2;</code>
+     */
+    public Builder setSystemAccess(int value) {
+      
+      systemAccess_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 system_access = 2;</code>
+     */
+    public Builder clearSystemAccess() {
+      
+      systemAccess_ = 0;
       onChanged();
       return this;
     }

@@ -16,4 +16,9 @@ public interface CredentialsRpcOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserIdBytes();
+
+  /**
+   * <code>int32 system_access = 2;</code>
+   */
+  int getSystemAccess();
 }
