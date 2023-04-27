@@ -74,4 +74,25 @@ public class AuthClient {
         }
         return response.getToken();
     }
+
+    public String serviceToken(String adminId, String adminToken, String serviceId) {
+        ServiceTokenRequest request = ServiceTokenRequest.newBuilder()
+                .setAdminCredentials(CredentialsRpc.newBuilder()
+                        .setUserId(adminId)
+                        .setSystemAccess(SystemAccess.ADMIN.id)
+                        .build())
+                .setAdminToken(adminToken)
+                .setServiceCredentials(CredentialsRpc.newBuilder()
+                        .setUserId(serviceId)
+                        .setSystemAccess(SystemAccess.SERVICE.id)
+                        .build())
+                .build();
+        ServiceTokenResponse response;
+        try {
+            response = authService.serviceToken(request);
+        } catch (StatusRuntimeException e) {
+            throw new AuthServiceUnavailableException(e.getMessage());
+        }
+        return response.getToken();
+    }
 }

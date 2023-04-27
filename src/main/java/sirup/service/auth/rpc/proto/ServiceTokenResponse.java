@@ -4,18 +4,18 @@
 package sirup.service.auth.rpc.proto;
 
 /**
- * Protobuf type {@code auth.v4.TokenResponse}
+ * Protobuf type {@code auth.v4.ServiceTokenResponse}
  */
-public  final class TokenResponse extends
+public  final class ServiceTokenResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:auth.v4.TokenResponse)
-    TokenResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:auth.v4.ServiceTokenResponse)
+    ServiceTokenResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use TokenResponse.newBuilder() to construct.
-  private TokenResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ServiceTokenResponse.newBuilder() to construct.
+  private ServiceTokenResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private TokenResponse() {
+  private ServiceTokenResponse() {
     token_ = "";
   }
 
@@ -24,7 +24,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private TokenResponse(
+  private ServiceTokenResponse(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -83,15 +83,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_TokenResponse_descriptor;
+    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_ServiceTokenResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_TokenResponse_fieldAccessorTable
+    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_ServiceTokenResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            sirup.service.auth.rpc.proto.TokenResponse.class, sirup.service.auth.rpc.proto.TokenResponse.Builder.class);
+            sirup.service.auth.rpc.proto.ServiceTokenResponse.class, sirup.service.auth.rpc.proto.ServiceTokenResponse.Builder.class);
   }
 
   public static final int ERROR_FIELD_NUMBER = 1;
@@ -195,10 +195,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof sirup.service.auth.rpc.proto.TokenResponse)) {
+    if (!(obj instanceof sirup.service.auth.rpc.proto.ServiceTokenResponse)) {
       return super.equals(obj);
     }
-    sirup.service.auth.rpc.proto.TokenResponse other = (sirup.service.auth.rpc.proto.TokenResponse) obj;
+    sirup.service.auth.rpc.proto.ServiceTokenResponse other = (sirup.service.auth.rpc.proto.ServiceTokenResponse) obj;
 
     boolean result = true;
     result = result && (hasError() == other.hasError());
@@ -230,69 +230,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static sirup.service.auth.rpc.proto.TokenResponse parseFrom(
+  public static sirup.service.auth.rpc.proto.ServiceTokenResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sirup.service.auth.rpc.proto.TokenResponse parseFrom(
+  public static sirup.service.auth.rpc.proto.ServiceTokenResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sirup.service.auth.rpc.proto.TokenResponse parseFrom(
+  public static sirup.service.auth.rpc.proto.ServiceTokenResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sirup.service.auth.rpc.proto.TokenResponse parseFrom(
+  public static sirup.service.auth.rpc.proto.ServiceTokenResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sirup.service.auth.rpc.proto.TokenResponse parseFrom(byte[] data)
+  public static sirup.service.auth.rpc.proto.ServiceTokenResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sirup.service.auth.rpc.proto.TokenResponse parseFrom(
+  public static sirup.service.auth.rpc.proto.ServiceTokenResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sirup.service.auth.rpc.proto.TokenResponse parseFrom(java.io.InputStream input)
+  public static sirup.service.auth.rpc.proto.ServiceTokenResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static sirup.service.auth.rpc.proto.TokenResponse parseFrom(
+  public static sirup.service.auth.rpc.proto.ServiceTokenResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static sirup.service.auth.rpc.proto.TokenResponse parseDelimitedFrom(java.io.InputStream input)
+  public static sirup.service.auth.rpc.proto.ServiceTokenResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static sirup.service.auth.rpc.proto.TokenResponse parseDelimitedFrom(
+  public static sirup.service.auth.rpc.proto.ServiceTokenResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static sirup.service.auth.rpc.proto.TokenResponse parseFrom(
+  public static sirup.service.auth.rpc.proto.ServiceTokenResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static sirup.service.auth.rpc.proto.TokenResponse parseFrom(
+  public static sirup.service.auth.rpc.proto.ServiceTokenResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -305,7 +305,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(sirup.service.auth.rpc.proto.TokenResponse prototype) {
+  public static Builder newBuilder(sirup.service.auth.rpc.proto.ServiceTokenResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -321,26 +321,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code auth.v4.TokenResponse}
+   * Protobuf type {@code auth.v4.ServiceTokenResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:auth.v4.TokenResponse)
-      sirup.service.auth.rpc.proto.TokenResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:auth.v4.ServiceTokenResponse)
+      sirup.service.auth.rpc.proto.ServiceTokenResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_TokenResponse_descriptor;
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_ServiceTokenResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_TokenResponse_fieldAccessorTable
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_ServiceTokenResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              sirup.service.auth.rpc.proto.TokenResponse.class, sirup.service.auth.rpc.proto.TokenResponse.Builder.class);
+              sirup.service.auth.rpc.proto.ServiceTokenResponse.class, sirup.service.auth.rpc.proto.ServiceTokenResponse.Builder.class);
     }
 
-    // Construct using sirup.service.auth.rpc.proto.TokenResponse.newBuilder()
+    // Construct using sirup.service.auth.rpc.proto.ServiceTokenResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -372,17 +372,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_TokenResponse_descriptor;
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_ServiceTokenResponse_descriptor;
     }
 
     @java.lang.Override
-    public sirup.service.auth.rpc.proto.TokenResponse getDefaultInstanceForType() {
-      return sirup.service.auth.rpc.proto.TokenResponse.getDefaultInstance();
+    public sirup.service.auth.rpc.proto.ServiceTokenResponse getDefaultInstanceForType() {
+      return sirup.service.auth.rpc.proto.ServiceTokenResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public sirup.service.auth.rpc.proto.TokenResponse build() {
-      sirup.service.auth.rpc.proto.TokenResponse result = buildPartial();
+    public sirup.service.auth.rpc.proto.ServiceTokenResponse build() {
+      sirup.service.auth.rpc.proto.ServiceTokenResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -390,8 +390,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public sirup.service.auth.rpc.proto.TokenResponse buildPartial() {
-      sirup.service.auth.rpc.proto.TokenResponse result = new sirup.service.auth.rpc.proto.TokenResponse(this);
+    public sirup.service.auth.rpc.proto.ServiceTokenResponse buildPartial() {
+      sirup.service.auth.rpc.proto.ServiceTokenResponse result = new sirup.service.auth.rpc.proto.ServiceTokenResponse(this);
       if (errorBuilder_ == null) {
         result.error_ = error_;
       } else {
@@ -436,16 +436,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof sirup.service.auth.rpc.proto.TokenResponse) {
-        return mergeFrom((sirup.service.auth.rpc.proto.TokenResponse)other);
+      if (other instanceof sirup.service.auth.rpc.proto.ServiceTokenResponse) {
+        return mergeFrom((sirup.service.auth.rpc.proto.ServiceTokenResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(sirup.service.auth.rpc.proto.TokenResponse other) {
-      if (other == sirup.service.auth.rpc.proto.TokenResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(sirup.service.auth.rpc.proto.ServiceTokenResponse other) {
+      if (other == sirup.service.auth.rpc.proto.ServiceTokenResponse.getDefaultInstance()) return this;
       if (other.hasError()) {
         mergeError(other.getError());
       }
@@ -468,11 +468,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      sirup.service.auth.rpc.proto.TokenResponse parsedMessage = null;
+      sirup.service.auth.rpc.proto.ServiceTokenResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (sirup.service.auth.rpc.proto.TokenResponse) e.getUnfinishedMessage();
+        parsedMessage = (sirup.service.auth.rpc.proto.ServiceTokenResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -680,41 +680,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:auth.v4.TokenResponse)
+    // @@protoc_insertion_point(builder_scope:auth.v4.ServiceTokenResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:auth.v4.TokenResponse)
-  private static final sirup.service.auth.rpc.proto.TokenResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:auth.v4.ServiceTokenResponse)
+  private static final sirup.service.auth.rpc.proto.ServiceTokenResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new sirup.service.auth.rpc.proto.TokenResponse();
+    DEFAULT_INSTANCE = new sirup.service.auth.rpc.proto.ServiceTokenResponse();
   }
 
-  public static sirup.service.auth.rpc.proto.TokenResponse getDefaultInstance() {
+  public static sirup.service.auth.rpc.proto.ServiceTokenResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<TokenResponse>
-      PARSER = new com.google.protobuf.AbstractParser<TokenResponse>() {
+  private static final com.google.protobuf.Parser<ServiceTokenResponse>
+      PARSER = new com.google.protobuf.AbstractParser<ServiceTokenResponse>() {
     @java.lang.Override
-    public TokenResponse parsePartialFrom(
+    public ServiceTokenResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new TokenResponse(input, extensionRegistry);
+      return new ServiceTokenResponse(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<TokenResponse> parser() {
+  public static com.google.protobuf.Parser<ServiceTokenResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<TokenResponse> getParserForType() {
+  public com.google.protobuf.Parser<ServiceTokenResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public sirup.service.auth.rpc.proto.TokenResponse getDefaultInstanceForType() {
+  public sirup.service.auth.rpc.proto.ServiceTokenResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

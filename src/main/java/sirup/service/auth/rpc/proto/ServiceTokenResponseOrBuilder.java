@@ -3,8 +3,8 @@
 
 package sirup.service.auth.rpc.proto;
 
-public interface AuthResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:auth.v4.AuthResponse)
+public interface ServiceTokenResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:auth.v4.ServiceTokenResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -21,7 +21,12 @@ public interface AuthResponseOrBuilder extends
   sirup.service.auth.rpc.proto.ErrorRpcOrBuilder getErrorOrBuilder();
 
   /**
-   * <code>bool token_valid = 2;</code>
+   * <code>string token = 2;</code>
    */
-  boolean getTokenValid();
+  java.lang.String getToken();
+  /**
+   * <code>string token = 2;</code>
+   */
+  com.google.protobuf.ByteString
+      getTokenBytes();
 }

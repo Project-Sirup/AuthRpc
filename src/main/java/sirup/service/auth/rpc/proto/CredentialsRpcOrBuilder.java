@@ -4,7 +4,7 @@
 package sirup.service.auth.rpc.proto;
 
 public interface CredentialsRpcOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:auth.v2.CredentialsRpc)
+    // @@protoc_insertion_point(interface_extends:auth.v4.CredentialsRpc)
     com.google.protobuf.MessageOrBuilder {
 
   /**

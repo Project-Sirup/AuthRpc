@@ -15,45 +15,55 @@ public final class Auth {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_auth_v2_HealthRequest_descriptor;
+    internal_static_auth_v4_HealthRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_auth_v2_HealthRequest_fieldAccessorTable;
+      internal_static_auth_v4_HealthRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_auth_v2_HealthResponse_descriptor;
+    internal_static_auth_v4_HealthResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_auth_v2_HealthResponse_fieldAccessorTable;
+      internal_static_auth_v4_HealthResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_auth_v2_TokenRequest_descriptor;
+    internal_static_auth_v4_TokenRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_auth_v2_TokenRequest_fieldAccessorTable;
+      internal_static_auth_v4_TokenRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_auth_v2_TokenResponse_descriptor;
+    internal_static_auth_v4_TokenResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_auth_v2_TokenResponse_fieldAccessorTable;
+      internal_static_auth_v4_TokenResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_auth_v2_AuthRequest_descriptor;
+    internal_static_auth_v4_AuthRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_auth_v2_AuthRequest_fieldAccessorTable;
+      internal_static_auth_v4_AuthRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_auth_v2_AuthResponse_descriptor;
+    internal_static_auth_v4_AuthResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_auth_v2_AuthResponse_fieldAccessorTable;
+      internal_static_auth_v4_AuthResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_auth_v2_CredentialsRpc_descriptor;
+    internal_static_auth_v4_CredentialsRpc_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_auth_v2_CredentialsRpc_fieldAccessorTable;
+      internal_static_auth_v4_CredentialsRpc_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_auth_v2_ErrorRpc_descriptor;
+    internal_static_auth_v4_ServiceTokenRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_auth_v2_ErrorRpc_fieldAccessorTable;
+      internal_static_auth_v4_ServiceTokenRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_auth_v4_ServiceTokenResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_auth_v4_ServiceTokenResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_auth_v4_ErrorRpc_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_auth_v4_ErrorRpc_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -63,24 +73,32 @@ public final class Auth {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020sirup_auth.proto\022\007auth.v2\"\017\n\rHealthReq" +
+      "\n\020sirup_auth.proto\022\007auth.v4\"\017\n\rHealthReq" +
       "uest\"%\n\016HealthResponse\022\023\n\013health_code\030\001 " +
       "\001(\005\"<\n\014TokenRequest\022,\n\013credentials\030\001 \001(\013" +
-      "2\027.auth.v2.CredentialsRpc\"@\n\rTokenRespon" +
-      "se\022 \n\005error\030\001 \001(\0132\021.auth.v2.ErrorRpc\022\r\n\005" +
+      "2\027.auth.v4.CredentialsRpc\"@\n\rTokenRespon" +
+      "se\022 \n\005error\030\001 \001(\0132\021.auth.v4.ErrorRpc\022\r\n\005" +
       "token\030\002 \001(\t\"N\n\013AuthRequest\022\r\n\005token\030\001 \001(" +
-      "\t\0220\n\017credentials_rpc\030\002 \001(\0132\027.auth.v2.Cre" +
+      "\t\0220\n\017credentials_rpc\030\002 \001(\0132\027.auth.v4.Cre" +
       "dentialsRpc\"E\n\014AuthResponse\022 \n\005error\030\001 \001" +
-      "(\0132\021.auth.v2.ErrorRpc\022\023\n\013token_valid\030\002 \001" +
+      "(\0132\021.auth.v4.ErrorRpc\022\023\n\013token_valid\030\002 \001" +
       "(\010\"8\n\016CredentialsRpc\022\017\n\007user_id\030\001 \001(\t\022\025\n" +
-      "\rsystem_access\030\002 \001(\005\"1\n\010ErrorRpc\022\016\n\006stat" +
-      "us\030\001 \001(\005\022\025\n\rerror_message\030\002 \001(\t2\300\001\n\020Siru" +
-      "pAuthService\022;\n\006Health\022\026.auth.v2.HealthR" +
-      "equest\032\027.auth.v2.HealthResponse\"\000\0228\n\005Tok" +
-      "en\022\025.auth.v2.TokenRequest\032\026.auth.v2.Toke" +
-      "nResponse\"\000\0225\n\004Auth\022\024.auth.v2.AuthReques" +
-      "t\032\025.auth.v2.AuthResponse\"\000B,\n\034sirup.serv" +
-      "ice.auth.rpc.protoB\004AuthP\001\242\002\003SASb\006proto3"
+      "\rsystem_access\030\002 \001(\005\"\224\001\n\023ServiceTokenReq" +
+      "uest\0222\n\021admin_credentials\030\001 \001(\0132\027.auth.v" +
+      "4.CredentialsRpc\022\023\n\013admin_token\030\002 \001(\t\0224\n" +
+      "\023service_credentials\030\003 \001(\0132\027.auth.v4.Cre" +
+      "dentialsRpc\"G\n\024ServiceTokenResponse\022 \n\005e" +
+      "rror\030\001 \001(\0132\021.auth.v4.ErrorRpc\022\r\n\005token\030\002" +
+      " \001(\t\"1\n\010ErrorRpc\022\016\n\006status\030\001 \001(\005\022\025\n\rerro" +
+      "r_message\030\002 \001(\t2\217\002\n\020SirupAuthService\022;\n\006" +
+      "Health\022\026.auth.v4.HealthRequest\032\027.auth.v4" +
+      ".HealthResponse\"\000\0228\n\005Token\022\025.auth.v4.Tok" +
+      "enRequest\032\026.auth.v4.TokenResponse\"\000\0225\n\004A" +
+      "uth\022\024.auth.v4.AuthRequest\032\025.auth.v4.Auth" +
+      "Response\"\000\022M\n\014ServiceToken\022\034.auth.v4.Ser" +
+      "viceTokenRequest\032\035.auth.v4.ServiceTokenR" +
+      "esponse\"\000B,\n\034sirup.service.auth.rpc.prot" +
+      "oB\004AuthP\001\242\002\003SASb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -94,53 +112,65 @@ public final class Auth {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_auth_v2_HealthRequest_descriptor =
+    internal_static_auth_v4_HealthRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_auth_v2_HealthRequest_fieldAccessorTable = new
+    internal_static_auth_v4_HealthRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_auth_v2_HealthRequest_descriptor,
+        internal_static_auth_v4_HealthRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_auth_v2_HealthResponse_descriptor =
+    internal_static_auth_v4_HealthResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_auth_v2_HealthResponse_fieldAccessorTable = new
+    internal_static_auth_v4_HealthResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_auth_v2_HealthResponse_descriptor,
+        internal_static_auth_v4_HealthResponse_descriptor,
         new java.lang.String[] { "HealthCode", });
-    internal_static_auth_v2_TokenRequest_descriptor =
+    internal_static_auth_v4_TokenRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_auth_v2_TokenRequest_fieldAccessorTable = new
+    internal_static_auth_v4_TokenRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_auth_v2_TokenRequest_descriptor,
+        internal_static_auth_v4_TokenRequest_descriptor,
         new java.lang.String[] { "Credentials", });
-    internal_static_auth_v2_TokenResponse_descriptor =
+    internal_static_auth_v4_TokenResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_auth_v2_TokenResponse_fieldAccessorTable = new
+    internal_static_auth_v4_TokenResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_auth_v2_TokenResponse_descriptor,
+        internal_static_auth_v4_TokenResponse_descriptor,
         new java.lang.String[] { "Error", "Token", });
-    internal_static_auth_v2_AuthRequest_descriptor =
+    internal_static_auth_v4_AuthRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_auth_v2_AuthRequest_fieldAccessorTable = new
+    internal_static_auth_v4_AuthRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_auth_v2_AuthRequest_descriptor,
+        internal_static_auth_v4_AuthRequest_descriptor,
         new java.lang.String[] { "Token", "CredentialsRpc", });
-    internal_static_auth_v2_AuthResponse_descriptor =
+    internal_static_auth_v4_AuthResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_auth_v2_AuthResponse_fieldAccessorTable = new
+    internal_static_auth_v4_AuthResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_auth_v2_AuthResponse_descriptor,
+        internal_static_auth_v4_AuthResponse_descriptor,
         new java.lang.String[] { "Error", "TokenValid", });
-    internal_static_auth_v2_CredentialsRpc_descriptor =
+    internal_static_auth_v4_CredentialsRpc_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_auth_v2_CredentialsRpc_fieldAccessorTable = new
+    internal_static_auth_v4_CredentialsRpc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_auth_v2_CredentialsRpc_descriptor,
+        internal_static_auth_v4_CredentialsRpc_descriptor,
         new java.lang.String[] { "UserId", "SystemAccess", });
-    internal_static_auth_v2_ErrorRpc_descriptor =
+    internal_static_auth_v4_ServiceTokenRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_auth_v2_ErrorRpc_fieldAccessorTable = new
+    internal_static_auth_v4_ServiceTokenRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_auth_v2_ErrorRpc_descriptor,
+        internal_static_auth_v4_ServiceTokenRequest_descriptor,
+        new java.lang.String[] { "AdminCredentials", "AdminToken", "ServiceCredentials", });
+    internal_static_auth_v4_ServiceTokenResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_auth_v4_ServiceTokenResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_auth_v4_ServiceTokenResponse_descriptor,
+        new java.lang.String[] { "Error", "Token", });
+    internal_static_auth_v4_ErrorRpc_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_auth_v4_ErrorRpc_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_auth_v4_ErrorRpc_descriptor,
         new java.lang.String[] { "Status", "ErrorMessage", });
   }
 

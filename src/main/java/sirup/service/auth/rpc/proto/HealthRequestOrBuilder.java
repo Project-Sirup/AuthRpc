@@ -4,6 +4,6 @@
 package sirup.service.auth.rpc.proto;
 
 public interface HealthRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:auth.v2.HealthRequest)
+    // @@protoc_insertion_point(interface_extends:auth.v4.HealthRequest)
     com.google.protobuf.MessageOrBuilder {
 }

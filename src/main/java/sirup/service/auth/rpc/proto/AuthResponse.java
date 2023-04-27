@@ -4,11 +4,11 @@
 package sirup.service.auth.rpc.proto;
 
 /**
- * Protobuf type {@code auth.v2.AuthResponse}
+ * Protobuf type {@code auth.v4.AuthResponse}
  */
 public  final class AuthResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:auth.v2.AuthResponse)
+    // @@protoc_insertion_point(message_implements:auth.v4.AuthResponse)
     AuthResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use AuthResponse.newBuilder() to construct.
@@ -82,13 +82,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_AuthResponse_descriptor;
+    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_AuthResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_AuthResponse_fieldAccessorTable
+    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_AuthResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             sirup.service.auth.rpc.proto.AuthResponse.class, sirup.service.auth.rpc.proto.AuthResponse.Builder.class);
   }
@@ -96,19 +96,19 @@ private static final long serialVersionUID = 0L;
   public static final int ERROR_FIELD_NUMBER = 1;
   private sirup.service.auth.rpc.proto.ErrorRpc error_;
   /**
-   * <code>.auth.v2.ErrorRpc error = 1;</code>
+   * <code>.auth.v4.ErrorRpc error = 1;</code>
    */
   public boolean hasError() {
     return error_ != null;
   }
   /**
-   * <code>.auth.v2.ErrorRpc error = 1;</code>
+   * <code>.auth.v4.ErrorRpc error = 1;</code>
    */
   public sirup.service.auth.rpc.proto.ErrorRpc getError() {
     return error_ == null ? sirup.service.auth.rpc.proto.ErrorRpc.getDefaultInstance() : error_;
   }
   /**
-   * <code>.auth.v2.ErrorRpc error = 1;</code>
+   * <code>.auth.v4.ErrorRpc error = 1;</code>
    */
   public sirup.service.auth.rpc.proto.ErrorRpcOrBuilder getErrorOrBuilder() {
     return getError();
@@ -297,21 +297,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code auth.v2.AuthResponse}
+   * Protobuf type {@code auth.v4.AuthResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:auth.v2.AuthResponse)
+      // @@protoc_insertion_point(builder_implements:auth.v4.AuthResponse)
       sirup.service.auth.rpc.proto.AuthResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_AuthResponse_descriptor;
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_AuthResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_AuthResponse_fieldAccessorTable
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_AuthResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               sirup.service.auth.rpc.proto.AuthResponse.class, sirup.service.auth.rpc.proto.AuthResponse.Builder.class);
     }
@@ -348,7 +348,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_AuthResponse_descriptor;
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_AuthResponse_descriptor;
     }
 
     @java.lang.Override
@@ -461,13 +461,13 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         sirup.service.auth.rpc.proto.ErrorRpc, sirup.service.auth.rpc.proto.ErrorRpc.Builder, sirup.service.auth.rpc.proto.ErrorRpcOrBuilder> errorBuilder_;
     /**
-     * <code>.auth.v2.ErrorRpc error = 1;</code>
+     * <code>.auth.v4.ErrorRpc error = 1;</code>
      */
     public boolean hasError() {
       return errorBuilder_ != null || error_ != null;
     }
     /**
-     * <code>.auth.v2.ErrorRpc error = 1;</code>
+     * <code>.auth.v4.ErrorRpc error = 1;</code>
      */
     public sirup.service.auth.rpc.proto.ErrorRpc getError() {
       if (errorBuilder_ == null) {
@@ -477,7 +477,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.auth.v2.ErrorRpc error = 1;</code>
+     * <code>.auth.v4.ErrorRpc error = 1;</code>
      */
     public Builder setError(sirup.service.auth.rpc.proto.ErrorRpc value) {
       if (errorBuilder_ == null) {
@@ -493,7 +493,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.auth.v2.ErrorRpc error = 1;</code>
+     * <code>.auth.v4.ErrorRpc error = 1;</code>
      */
     public Builder setError(
         sirup.service.auth.rpc.proto.ErrorRpc.Builder builderForValue) {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.auth.v2.ErrorRpc error = 1;</code>
+     * <code>.auth.v4.ErrorRpc error = 1;</code>
      */
     public Builder mergeError(sirup.service.auth.rpc.proto.ErrorRpc value) {
       if (errorBuilder_ == null) {
@@ -525,7 +525,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.auth.v2.ErrorRpc error = 1;</code>
+     * <code>.auth.v4.ErrorRpc error = 1;</code>
      */
     public Builder clearError() {
       if (errorBuilder_ == null) {
@@ -539,7 +539,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.auth.v2.ErrorRpc error = 1;</code>
+     * <code>.auth.v4.ErrorRpc error = 1;</code>
      */
     public sirup.service.auth.rpc.proto.ErrorRpc.Builder getErrorBuilder() {
       
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
       return getErrorFieldBuilder().getBuilder();
     }
     /**
-     * <code>.auth.v2.ErrorRpc error = 1;</code>
+     * <code>.auth.v4.ErrorRpc error = 1;</code>
      */
     public sirup.service.auth.rpc.proto.ErrorRpcOrBuilder getErrorOrBuilder() {
       if (errorBuilder_ != null) {
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.auth.v2.ErrorRpc error = 1;</code>
+     * <code>.auth.v4.ErrorRpc error = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         sirup.service.auth.rpc.proto.ErrorRpc, sirup.service.auth.rpc.proto.ErrorRpc.Builder, sirup.service.auth.rpc.proto.ErrorRpcOrBuilder> 
@@ -612,10 +612,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:auth.v2.AuthResponse)
+    // @@protoc_insertion_point(builder_scope:auth.v4.AuthResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:auth.v2.AuthResponse)
+  // @@protoc_insertion_point(class_scope:auth.v4.AuthResponse)
   private static final sirup.service.auth.rpc.proto.AuthResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new sirup.service.auth.rpc.proto.AuthResponse();

@@ -4,11 +4,11 @@
 package sirup.service.auth.rpc.proto;
 
 /**
- * Protobuf type {@code auth.v2.HealthResponse}
+ * Protobuf type {@code auth.v4.HealthResponse}
  */
 public  final class HealthResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:auth.v2.HealthResponse)
+    // @@protoc_insertion_point(message_implements:auth.v4.HealthResponse)
     HealthResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use HealthResponse.newBuilder() to construct.
@@ -69,13 +69,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_HealthResponse_descriptor;
+    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_HealthResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_HealthResponse_fieldAccessorTable
+    return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_HealthResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             sirup.service.auth.rpc.proto.HealthResponse.class, sirup.service.auth.rpc.proto.HealthResponse.Builder.class);
   }
@@ -246,21 +246,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code auth.v2.HealthResponse}
+   * Protobuf type {@code auth.v4.HealthResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:auth.v2.HealthResponse)
+      // @@protoc_insertion_point(builder_implements:auth.v4.HealthResponse)
       sirup.service.auth.rpc.proto.HealthResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_HealthResponse_descriptor;
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_HealthResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_HealthResponse_fieldAccessorTable
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_HealthResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               sirup.service.auth.rpc.proto.HealthResponse.class, sirup.service.auth.rpc.proto.HealthResponse.Builder.class);
     }
@@ -291,7 +291,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v2_HealthResponse_descriptor;
+      return sirup.service.auth.rpc.proto.Auth.internal_static_auth_v4_HealthResponse_descriptor;
     }
 
     @java.lang.Override
@@ -430,10 +430,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:auth.v2.HealthResponse)
+    // @@protoc_insertion_point(builder_scope:auth.v4.HealthResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:auth.v2.HealthResponse)
+  // @@protoc_insertion_point(class_scope:auth.v4.HealthResponse)
   private static final sirup.service.auth.rpc.proto.HealthResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new sirup.service.auth.rpc.proto.HealthResponse();
